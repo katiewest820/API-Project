@@ -1,5 +1,8 @@
 
-var service;
+let service;
+let food;
+let town;
+let value;
 
 
 $('.beginButton').on('click', function(){
@@ -10,20 +13,26 @@ $('.beginButton').on('click', function(){
 
 
 
+function search(){
+$('.searchButton').on('click', function(event){
+	event.preventDefault();
+	food = $('.food').val()
+	town = $('.location').val()
+	value = town +" " + food
+initialize(value)
+console.log(value)
+})
 
 
+function initialize (searchterm) {
+  service = new google.maps.places.PlacesService($('.location, .food').get(0));
 
-
-
-window.initialize = function () {
-  service = new google.maps.places.PlacesService($('.service').get(0));
-
-//service.textSearch({
- // query: 'portland gluten free'
+service.textSearch({
+  query: searchterm
   
-//}, function(place){
-//  console.log(place)
-//});
+}, function(place){
+  console.log(place)
+});
     
 let information = {
  placeId: 'ChIJK2yd6HQKlVQRKbkRWt1eBAQ',
@@ -37,3 +46,9 @@ function second(place){
 }
 
 }
+
+
+
+}
+
+search();
