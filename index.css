@@ -1,0 +1,49 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+html{
+	height:100%;
+	width:100%;
+}
+
+
+.frontImage{
+	background-image: url("file:///C:/Users/West/Desktop/API%20Project/dessert.jpeg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center top;
+	height: 500px;
+	width:100%;
+	border-bottom: 3px solid black;
+}
+
+.queryBox{
+	background-color: black;
+	height:300px;
+	width:100%;
+	
+	position: relative;
+
+}
+
+h1{
+	
+	color:white;
+	text-align: center;
+	padding-top: 30px;
+	font-family: 'Amatic SC', cursive;
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.secondPage{
+	display:none;
+	background-color: black;
+	height:800px;
+	width:100%;
+}
+
+
+
