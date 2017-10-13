@@ -1,8 +1,9 @@
-a {
+.beginButton {
   text-decoration: none;
   position: absolute;
   cursor: pointer;
-  bottom:30px;
+  bottom:0%;
+  text-align: center;
   left: 50%;
   color: white;
   transform: translate3d(-50%, -50%, 0);
@@ -11,12 +12,12 @@ a {
   font-size: 1.5em;
   letter-spacing: 0.07em;
 }
-a .text {
+.beginButton .text {
   font-family: proxima-nova;
   transform: translate3d(0, 0.7em, 0);
   transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
 }
-a:after {
+.beginButton:after {
   position: absolute;
   content: '';
   bottom: -3px;
@@ -66,40 +67,47 @@ a:after {
   transform-origin: right;
 }
 
-a:hover .text,
-a:active .text {
+.beginButton:hover .text,
+.beginButton:active .text {
   transform: translate3d(0, 0, 0);
   transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
 }
-a:hover:after,
-a:active:after {
+.beginButton:hover:after,
+.beginButton:active:after {
   transform: scale3d(0, 1, 1);
   right: -3px;
   left: -3px;
   transform-origin: right;
   transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
 }
-a:hover .line,
-a:active .line {
+.beginButton:hover .line,
+.beginButton:active .line {
   transform: scale3d(1, 1, 1);
 }
-a:hover .line.-right,
-a:active .line.-right {
+.beginButton:hover .line.-right,
+.beginButton:active .line.-right {
   transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
   transform-origin: bottom;
 }
-a:hover .line.-top,
-a:active .line.-top {
+.beginButton:hover .line.-top,
+.beginButton:active .line.-top {
   transition: transform 0.08s linear 0.4s;
   transform-origin: right;
 }
-a:hover .line.-left,
-a:active .line.-left {
+.beginButton:hover .line.-left,
+.beginButton:active .line.-left {
   transition: transform 0.08s linear 0.48s;
   transform-origin: top;
 }
-a:hover .line.-bottom,
-a:active .line.-bottom {
+.beginButton:hover .line.-bottom,
+.beginButton:active .line.-bottom {
   transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
   transform-origin: left;
+}
+
+@media (min-width: 640px){
+
+.beginButton{
+	bottom:10%;
+}	
 }

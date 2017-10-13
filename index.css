@@ -3,37 +3,32 @@
 	padding:0;
 }
 
-html{
+html, body, section{
 	height:100%;
 	width:100%;
 }
-
 
 .frontImage{
 	background-image: url("file:///C:/Users/West/Desktop/API%20Project/dessert.jpeg");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center top;
-	height: 500px;
+	height: 250px;
 	width:100%;
-	border-bottom: 3px solid black;
 }
 
 .queryBox{
 	background-color: black;
-	height:300px;
-	width:100%;
-	
 	position: relative;
-
+	height: 60%;
 }
 
 h1{
 	color:white;
 	text-align: center;
-	padding-top: 30px;
+	padding-top: 20px;
 	font-family: 'Amatic SC', cursive;
-	font-size: 60px;
+	font-size: 40px;
 	font-weight: bold;
 }
 
@@ -45,16 +40,77 @@ h1{
 }
 
 .resultsPage{
-	background-color: black;
-	height:800px;
+	display:none;
+}
+
+.resultsImg{
+	max-width: fit-content;
+	padding-top: 30px;
+	padding-bottom:30px;
+}
+
+.locationImg{
+	height:190px;
+	max-width: 250px;
+}
+
+.imgSection{
 	width:100%;
+	height: 330px;
+	display:inline-grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
 }
 
+.left, .right{
+	padding-top:30%;
+}
 
+.fa{
+	color: black;
+}
 
-.name, .address{
+.resultsSection{
+	background-color: black;
 	color:white;
+	height: 60%;
+}
+
+@media (min-width: 640px){
+
+.frontImage{
+	height: 500px;
+}
+
+h1{
+	font-size: 60px;
+}
+
+.queryBox{
+	height: 40%;
+}
+
+.imgSection{
+	height: 370px;
+}
+
+.locationImg{
+	height:300px;
+	max-width: fit-content;
+}
+
+.resultsSection{
+	height: 440px;
 }
 
 
+.left{
+	padding-left: 90%
+}
 
+.right{
+	padding-right: 90%;
+}
+
+
+}

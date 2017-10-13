@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Dessert Search</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="button.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    
+    <script src="https://use.fontawesome.com/cbc47f1ee5.js"></script>
   </head>
   <body>
     <section class="firstPage">
@@ -21,7 +23,6 @@
             <span class="line -left"></span>
             <span class="line -bottom"></span>
           </a>
-        <div class="service"></div>
       </section>
     </section>
 
@@ -34,21 +35,25 @@
     </section>
 
     <section class="resultsPage">
-      <div class="resultsImg"></div>
-      <div class="results"></div>
 
-      <button class="nextOption">Next</button>
-      <button class="nextImg">More Images</button>
-
+      <div class="imgSection">
+        <a class="left" href="#"><i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i></a>
+        <div class="resultsImg"></div>
+        <a class="right" href="#"><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></a>
+      </div>
+      
+      <div class="resultsSection">
+        <div class="results"></div>
+        <div class="hours"></div>
+        <button class="nextOption">Next</button>
+      </div>
 
 
     </section>
 
 
 
-     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQH8HSvpjQlxsEvFdsskrM2JH6j_18CW8&libraries=places"></script>
   
