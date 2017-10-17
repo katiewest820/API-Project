@@ -1,6 +1,7 @@
 *{
 	margin:0;
 	padding:0;
+	box-sizing: border-box;
 }
 
 html, body, section{
@@ -9,34 +10,141 @@ html, body, section{
 }
 
 .frontImage{
-	background-image: url("file:///C:/Users/West/Desktop/API%20Project/dessert.jpeg");
+	background-image: url("file:///C:/Users/West/Desktop/API%20Project/beer.jpg");
 	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center top;
-	height: 250px;
+	background-size: cover;
+	background-position: center;
+	height:100%;
 	width:100%;
-}
-
-.queryBox{
-	background-color: black;
 	position: relative;
-	height: 60%;
 }
 
-h1{
-	color:white;
-	text-align: center;
-	padding-top: 20px;
+.beginButton{
+	position:absolute;
+	left:40%;
+	top:70%;
+	background-color: white;
 	font-family: 'Amatic SC', cursive;
-	font-size: 40px;
+	color:black;
 	font-weight: bold;
+	padding: 20px 60px;
+	opacity: 0.75;
+	font-size:30px;
+	border: solid white 3px;
+	border-radius: 5px;
 }
 
-.secondPage{
-	display:none;
+.beginButton:hover{
+	background-color: grey;
+}
+
+.lightbox{
+    display: none;
+    position: fixed;
+    z-index:999;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .70;
+    text-align: center
+}
+
+.lightbox div{
+	margin:auto;
+	margin-top: 10%;
+	padding:40px;
+	background-color:grey;
+	border:solid white 3px;
+	border-radius: 10px;
+	box-sizing: content-box;
+}
+
+.searchButton{
 	background-color: black;
-	height:800px;
+	color:white;
+	font-family: 'Amatic SC', cursive;
+	font-size: 20px;
+	padding: 7px 20px;
+}
+
+.searchButton:hover{
+	background-color: white;
+	color:black;
+}
+
+.location{
+	font-size: 20px;
+	font-family: 'Amatic SC', cursive;
+	padding:8px 50px;
+	margin:5px;
+}
+
+.dropdown {
+	font-family: 'Amatic SC', cursive;
+    background-color: black;
+    color: white;
+    padding: 7px 18px;
+    font-size: 20px;
+    border: none;
+    
+}
+
+.loadScreen{
+	display: none;
+	height:1000px;
 	width:100%;
+	background-color: grey;
+}
+
+.loading{
+	font-size: 80px;
+	font-weight: bold;
+	position:relative;
+  	text-align:center;
+	top:200px;
+	font-family: 'Amatic SC', cursive;
+}
+
+@keyframes blink {
+    0% {
+      opacity: .2;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: .2;
+    }
+}
+
+.loading span{
+    animation-name: blink;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.loading span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.imgSection{
+	display:none;
+	background-image: url("file:///C:/Users/West/Desktop/API%20Project/background.jpeg");
+	background-size: cover;
+	background-position: center;
+	border-bottom: black 10px solid;
+	width:100%;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
 }
 
 .resultsPage{
@@ -46,7 +154,7 @@ h1{
 .resultsImg{
 	max-width: fit-content;
 	padding-top: 30px;
-	padding-bottom:30px;
+	padding-bottom: 15px;
 }
 
 .locationImg{
@@ -54,44 +162,105 @@ h1{
 	max-width: 250px;
 }
 
-.imgSection{
+.results{
+	font-family: 'Amatic SC', cursive;
+	text-align: center;
 	width:100%;
-	height: 330px;
-	display:inline-grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	justify-items: center;
+	display: inline-grid;
 }
 
-.left, .right{
-	padding-top:30%;
+.results h1{
+	font-size: 40px;
+}
+
+.results a, .results p{
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
+	color:black;
+}
+
+.results a:hover{
+	text-decoration: underline;
+}
+
+.infoSection{
+	margin-top:5px;
+	width:75%;
+	margin:auto;
+}
+
+.reviewCell{
+	display: inline-flex;
+	align-items: center;
+	max-width: 300px;
+	margin:auto;
+}
+
+.reviewSection{
+	margin:15px;
 }
 
 .fa{
-	color: black;
+	color:black;
 }
 
-.resultsSection{
+.fa:hover{
+	color: #3e8e41;
+}
+
+.hours, .hours li{
+	padding:5px;
+	font-size: 13px;
+	align-self: center;
+	list-style: none;
+}
+
+.hours{
+	border:solid black 3px;
+	margin:auto;
+	margin-bottom: 5px;
+}
+
+.nextOptionClass{
+	width:100%;
+	text-align: center;
+	display: inline-block;
+}
+
+.nextOption, .newSearch{
+	margin:auto;
 	background-color: black;
 	color:white;
-	height: 60%;
+	font-family: 'Amatic SC', cursive;
+	font-size: 20px;
+	padding: 10px 30px;
+	margin-bottom:20px;
 }
+
+.nextOption:hover, .newSearch:hover{
+	background-color: #3e8e41;
+}
+
 
 @media (min-width: 640px){
 
-.frontImage{
-	height: 500px;
-}
-
-h1{
-	font-size: 60px;
-}
-
-.queryBox{
-	height: 40%;
+.beginButton{
+	left:55%;
+	padding: 30px 80px;
 }
 
 .imgSection{
-	height: 370px;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items:center;
+	align-items:center;
+}
+
+.lightbox div{
+	width:60%;
+	margin-top: 15%;
+	padding:70px;
 }
 
 .locationImg{
@@ -99,17 +268,31 @@ h1{
 	max-width: fit-content;
 }
 
-.resultsSection{
-	height: 440px;
+.leftImg{
+	padding-left: 85%
+}
+
+.rightImg{
+	padding-right: 85%;
 }
 
 
-.left{
-	padding-left: 90%
+.results h1{
+	font-size: 70px;
 }
 
-.right{
-	padding-right: 90%;
+.results a{
+	font-size: 40px;
+}
+
+.infoSection{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+.reviewCell{
+	max-width: 400px;
 }
 
 

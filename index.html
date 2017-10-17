@@ -2,10 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Dessert Search</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Brewery Search</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="button.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     
@@ -13,43 +12,71 @@
   </head>
   <body>
     <section class="firstPage">
-      <div class="frontImage"></div>
-      <section class="queryBox">
-        <h1>A Sweet Tooth is a Horrible thing to Waste</h1>
-          <a href="#" class="beginButton">
-            <span class="text">Find Desserts</span>
-            <span class="line -right"></span>
-            <span class="line -top"></span>
-            <span class="line -left"></span>
-            <span class="line -bottom"></span>
-          </a>
-      </section>
+      <div class="frontImage">
+          <button class="beginButton">Beers?</button>
+      </div>
     </section>
 
-    <section class="secondPage">
+    <section class="lightbox">
+      <div>
       <form>
         <input class="location" type="text" placeholder="Location">
-        <input class="food" type="text" placeholder="Dessert type">
+            <select class="dropdown">
+              <option disabled selected>Beer Style</option>
+              <option>English Ale</option>
+              <option>German Ale</option>
+              <option>IPA</option>
+              <option>Lager</option>
+              <option>Porter</option>
+              <option>Pale Ale</option>
+              <option>Pilsner</option>
+              <option>Saison</option>
+              <option>Sour</option>
+              <option>Stout</option>   
+            </select>
+          
         <button class="searchButton">Submit</button>
       </form>
+    </div>
+    </section>
+    <section class="loadScreen">
+      <p class="loading">Loading<span>.</span><span>.</span><span>.</span></p>
     </section>
 
     <section class="resultsPage">
 
       <div class="imgSection">
-        <a class="left" href="#"><i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i></a>
+        <a class="leftImg" href="#"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
         <div class="resultsImg"></div>
-        <a class="right" href="#"><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></a>
+        <a class="rightImg" href="#"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
       </div>
       
       <div class="resultsSection">
         <div class="results"></div>
-        <div class="hours"></div>
+        
+        
+        <div class="infoSection">
+         
+          <div class="reviewCell">
+            <a class="leftRev" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <div class="reviewSection"></div>
+            <a class="rightRev" href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            
+          </div>
+          <div class="hours"></div>
+
+          
+        </div>
+        
+
+        <div class="nextOptionClass">
         <button class="nextOption">Next</button>
+        <button class="newSearch">New Search</button>
+      </div>
       </div>
 
 
-    </section>
+    </section> 
 
 
 
