@@ -52,9 +52,8 @@ html, body, section{
 }
 
 .lightbox div{
-	margin:auto;
-	margin-top: 10%;
-	padding:40px;
+	margin-top:50%;
+	padding:30px;
 	background-color:grey;
 	border:solid white 3px;
 	border-radius: 10px;
@@ -97,7 +96,6 @@ html, body, section{
 	width:100%;
 	background-color: grey;
 }
-
 .loading{
 	font-size: 80px;
 	font-weight: bold;
@@ -134,6 +132,22 @@ html, body, section{
     animation-delay: .4s;
 }
 
+.makeASelectionScreen{
+	display: none;
+	width:200px;
+	background-color: grey;
+	position: relative;
+	margin:auto;
+	bottom: 400px;
+	text-align: center;
+	padding:20px;
+	font-family: 'Amatic SC', cursive;
+	font-size: 25px;
+	font-weight: bold;
+	border: solid white 3px;
+	border-radius: 5px;
+}
+
 .imgSection{
 	display:none;
 	background-image: url("file:///C:/Users/West/Desktop/API%20Project/background.jpeg");
@@ -146,6 +160,8 @@ html, body, section{
 	justify-items: center;
 	align-items: center;
 }
+
+
 
 .resultsPage{
 	display:none;
@@ -165,8 +181,11 @@ html, body, section{
 .results{
 	font-family: 'Amatic SC', cursive;
 	text-align: center;
-	width:100%;
-	display: inline-grid;
+	width:80%;
+	margin:auto;
+	margin-bottom:20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid grey;
 }
 
 .results h1{
@@ -193,7 +212,6 @@ html, body, section{
 .reviewCell{
 	display: inline-flex;
 	align-items: center;
-	max-width: 300px;
 	margin:auto;
 }
 
@@ -217,9 +235,8 @@ html, body, section{
 }
 
 .hours{
-	border:solid black 3px;
+	border:solid grey 2px;
 	margin:auto;
-	margin-bottom: 5px;
 }
 
 .nextOptionClass{
@@ -259,7 +276,7 @@ html, body, section{
 
 .lightbox div{
 	width:60%;
-	margin-top: 15%;
+	margin: 15%;
 	padding:70px;
 }
 
@@ -289,10 +306,11 @@ html, body, section{
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr;
+	padding-bottom: 100px;
 }
 
 .reviewCell{
-	max-width: 400px;
+	width: 450px;
 }
 
 

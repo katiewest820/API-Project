@@ -15,13 +15,16 @@
       <div class="frontImage">
           <button class="beginButton">Beers?</button>
       </div>
+    
+      <div class="makeASelectionScreen">
+          <p>No breweries found. Please make a different selection</p>
+      </div>
     </section>
-
     <section class="lightbox">
       <div>
       <form>
-        <input class="location" type="text" placeholder="Location">
-            <select class="dropdown">
+        <input class="location" type="text" placeholder="Location" required>
+            <select class="dropdown" required>
               <option disabled selected>Beer Style</option>
               <option>English Ale</option>
               <option>German Ale</option>
@@ -43,6 +46,8 @@
       <p class="loading">Loading<span>.</span><span>.</span><span>.</span></p>
     </section>
 
+
+
     <section class="resultsPage">
 
       <div class="imgSection">
@@ -56,6 +61,7 @@
         
         
         <div class="infoSection">
+          <div class="hours"></div>
          
           <div class="reviewCell">
             <a class="leftRev" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
@@ -63,7 +69,7 @@
             <a class="rightRev" href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             
           </div>
-          <div class="hours"></div>
+          
 
           
         </div>

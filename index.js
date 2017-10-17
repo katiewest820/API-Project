@@ -23,11 +23,7 @@ $('.beginButton').on('click', function(){
 
 
 function search(){
-$('.searchButton').on('click', function(event){
-	event.preventDefault();
-	food = $('.dropdown').val();
-	town = $('.location').val();
-	value = 'brewery ' + town + " " + food;
+
 initialize(value);
 console.log(value);
 
@@ -39,6 +35,23 @@ setTimeout(function(){
 }, 3000)
 
 
+}
+
+function nothingFound(){
+	$('.searchButton').on('click', function(event){
+		event.preventDefault();
+		food = $('.dropdown').val();
+		town = $('.location').val();
+		value =  'brewery ' + town + " " + food;
+	if( !food || !town ){
+		$('.lightbox').fadeOut(300);
+		$('.makeASelectionScreen').css('display', 'block').delay(3000).fadeOut(100);
+		setTimeout(function(){
+			$('.lightbox').fadeIn(200).css('display', 'block');
+}, 3000)
+	} else {
+		search()
+	}
 })
 }
 
@@ -47,10 +60,18 @@ setTimeout(function(){
 function initialize (searchterm) {
   service = new google.maps.places.PlacesService($('.location, .food').get(0));
 		service.textSearch({ query: searchterm, type: 'bar'}, function(place){
-  		console.log(place)
+  		console.log(place[0])
   		checkBeginningReset(place)
-  		getDetails(place[result])
-	})
+  			if(place[0] == undefined){
+  		$('.firstPage').css('display', 'block');		
+		$('.makeASelectionScreen').css('display', 'block').delay(3000).fadeOut(100);
+		setTimeout(function(){
+			$('.lightbox').fadeIn(200).css('display', 'block');
+		}, 3000)
+	} else {
+		getDetails(place[result])
+	}
+})
 }
 
  
@@ -177,8 +198,8 @@ function newSearch(){
 	$('.newSearch').on('click', function(){
 		 	$('.location').val('')
 		$('.resultsPage').css('display', 'none')
-		$('.firstPage').fadeIn(300).css('display', 'grid')
-		$('.lightbox').fadeIn(300).css('display', 'grid')
+		$('.firstPage').fadeIn(300).css('display', 'block')
+		$('.lightbox').fadeIn(300).css('display', 'block')
 	})
 }
 
@@ -188,7 +209,7 @@ nextOption()
 nextImg()
 prevImg()
 lightboxOpen()
-search()
+nothingFound()
 nextReview()
 prevReview()
 newSearch()
