@@ -21,25 +21,25 @@ function lightboxOpen() {
 function search() {
 	$('.firstPage').fadeOut(300);
 	$('.lightbox').fadeOut(300);
-	setTimeout(function() {
-		$('.resultsPage').css('display', 'grid');
-	}, 3000)
+	$('.resultsPage').css('display', 'grid');
 }
 
 function nothingFound() {
 	$('.searchButton').on('click', function(event) {
 		event.preventDefault();
-		$('.loadScreen').css('display', 'block').delay(3000).fadeOut(400);
 		food = $('.dropdown').val();
 		town = $('.location').val();
 		value = 'brewery ' + town + " " + food;
 		if (!food || !town) {
-			$('.lightbox').fadeOut(300);
-			$('.makeASelectionScreen').css('display', 'block').delay(3000).fadeOut(100);
+			$('.lightbox').fadeOut(200);
+			$('.makeASelectionScreen').css('display', 'block').delay(3000).fadeOut(200);
 			setTimeout(function() {
 				$('.lightbox').fadeIn(200).css('display', 'block');
 			}, 3000)
 		} else {
+			$('.firstPage').fadeOut(200);
+			$('.lightbox').fadeOut(200);
+			$('.loadScreen').css('display', 'block').delay(3000).fadeOut(200);
 			initialize(value);
 		}
 	});
@@ -51,12 +51,12 @@ function initialize(searchterm) {
 		query: searchterm,
 		type: 'bar'
 	}, function(place) {
-		//console.log(place[0])
 		checkBeginningReset(place)
 		if (place[0] == undefined) {
-			$('.lightbox').css('display', 'none');
+			$('.firstPage').css('display', 'block');
 			$('.makeASelectionScreen').fadeIn(200).css('display', 'block').delay(3000).fadeOut(100);
 			setTimeout(function() {
+				$('.firstPage').fadeIn(200).css('display', 'block');
 				$('.lightbox').fadeIn(200).css('display', 'block');
 			}, 3000)
 		} else {
@@ -93,7 +93,7 @@ function checkBeginningReset(place) {
 
 function displayImages() {
 	clearResults();
-	$('.resultsImg').append(`<img class="locationImg" src="${photos[imgResult].getUrl({maxWidth: 400, maxHeight: 400})}">`);
+	$('.resultsImg').append(`<img alt="google image of location" class="locationImg" src="${photos[imgResult].getUrl({maxWidth: 400, maxHeight: 400})}">`);
 }
 
 function displayResults(place) {
@@ -149,6 +149,7 @@ function nextOption() {
 	$('.nextOption').on('click', function(event) {
 		event.preventDefault();
 		initialize(value);
+		//
 		$('.loadScreen').css('display','none');
 		imgResult = 0;
 		reviewNum = 0;
