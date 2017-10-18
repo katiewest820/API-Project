@@ -161,14 +161,14 @@ html, body, section{
 	align-items: center;
 }
 
-
-
 .resultsPage{
 	display:none;
 }
 
 .resultsImg{
 	max-width: fit-content;
+	min-width: 250px;
+	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 15px;
 }
@@ -182,6 +182,7 @@ html, body, section{
 	font-family: 'Amatic SC', cursive;
 	text-align: center;
 	width:80%;
+	min-height: 100px;
 	margin:auto;
 	margin-bottom:20px;
 	padding-bottom: 20px;
@@ -192,8 +193,7 @@ html, body, section{
 	font-size: 40px;
 }
 
-.results a, .results p{
-	font-weight: bold;
+.results a{
 	font-size: 20px;
 	text-decoration: none;
 	color:black;
@@ -267,6 +267,11 @@ html, body, section{
 	padding: 30px 80px;
 }
 
+.makeASelectionScreen{
+	bottom: 500px;
+	font-size: 30px;
+}
+
 .imgSection{
 	display:grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -286,20 +291,23 @@ html, body, section{
 }
 
 .leftImg{
-	padding-left: 85%
+	padding-left: 70%
 }
 
 .rightImg{
-	padding-right: 85%;
+	padding-right: 70%;
 }
 
+.results{
+	min-height:200px;
+}
 
 .results h1{
 	font-size: 70px;
 }
 
-.results a{
-	font-size: 40px;
+.results a, .results p{
+	font-size: 30px;
 }
 
 .infoSection{
@@ -310,7 +318,7 @@ html, body, section{
 }
 
 .reviewCell{
-	width: 450px;
+	min-width: 500px;
 }
 
 

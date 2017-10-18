@@ -1,94 +1,71 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <title>Brewery Search</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-    
-    <script src="https://use.fontawesome.com/cbc47f1ee5.js"></script>
-  </head>
-  <body>
-    <section class="firstPage">
-      <div class="frontImage">
-          <button class="beginButton">Beers?</button>
-      </div>
-    
-      <div class="makeASelectionScreen">
-          <p>No breweries found. Please make a different selection</p>
-      </div>
-    </section>
-    <section class="lightbox">
-      <div>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Search for breweries in your specified location by beer type." name="description">
+  <title>Brewery Search</title>
+  <link href="index.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <script src="https://use.fontawesome.com/cbc47f1ee5.js">
+  </script>
+</head>
+<body>
+  <section class="firstPage">
+    <div class="frontImage">
+      <button class="beginButton">Beers?</button>
+    </div>
+    <div class="makeASelectionScreen">
+      <p>No breweries found. Please make a new selection</p>
+    </div>
+  </section>
+  <section class="lightbox">
+    <div>
       <form>
-        <input class="location" type="text" placeholder="Location" required>
-            <select class="dropdown" required>
-              <option disabled selected>Beer Style</option>
-              <option>English Ale</option>
-              <option>German Ale</option>
-              <option>IPA</option>
-              <option>Lager</option>
-              <option>Porter</option>
-              <option>Pale Ale</option>
-              <option>Pilsner</option>
-              <option>Saison</option>
-              <option>Sour</option>
-              <option>Stout</option>   
-            </select>
-          
-        <button class="searchButton">Submit</button>
+        <input class="location" placeholder="Location" required="" type="text"> <select class="dropdown" required="">
+          <option disabled selected>Beer Style</option>
+          <option>English Ale</option>
+          <option>German Ale</option>
+          <option>IPA</option>
+          <option>Lager</option>
+          <option>Porter</option>
+          <option>Pale Ale</option>
+          <option>Pilsner</option>
+          <option>Saison</option>
+          <option>Sour</option>
+          <option>Stout</option>
+        </select> <button class="searchButton">Submit</button>
       </form>
     </div>
-    </section>
-    <section class="loadScreen">
-      <p class="loading">Loading<span>.</span><span>.</span><span>.</span></p>
-    </section>
-
-
-
-    <section class="resultsPage">
-
-      <div class="imgSection">
-        <a class="leftImg" href="#"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
-        <div class="resultsImg"></div>
-        <a class="rightImg" href="#"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
-      </div>
-      
-      <div class="resultsSection">
-        <div class="results"></div>
-        
-        
-        <div class="infoSection">
-          <div class="hours"></div>
-         
-          <div class="reviewCell">
-            <a class="leftRev" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-            <div class="reviewSection"></div>
-            <a class="rightRev" href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            
-          </div>
-          
-
-          
+  </section>
+  <section class="loadScreen">
+    <p class="loading">Loading<span>.</span><span>.</span><span>.</span></p>
+  </section>
+  <section class="resultsPage">
+    <div class="imgSection">
+      <a class="leftImg" href="#"><i aria-hidden="true" class="fa fa-arrow-left fa-3x"></i></a>
+      <div class="resultsImg"></div><a class="rightImg" href="#"><i aria-hidden="true" class="fa fa-arrow-right fa-3x"></i></a>
+    </div>
+    <div class="resultsSection">
+      <div class="results"></div>
+      <div class="infoSection">
+        <div class="hours"></div>
+        <div class="reviewCell">
+          <a class="leftRev" href="#"><i aria-hidden="true" class="fa fa-arrow-left"></i></a>
+          <div class="reviewSection"></div><a class="rightRev" href="#"><i aria-hidden="true" class="fa fa-arrow-right"></i></a>
         </div>
-        
-
-        <div class="nextOptionClass">
-        <button class="nextOption">Next</button>
-        <button class="newSearch">New Search</button>
       </div>
+      <div class="nextOptionClass">
+        <button class="nextOption">Next</button> <button class="newSearch">New Search</button>
       </div>
-
-
-    </section> 
-
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQH8HSvpjQlxsEvFdsskrM2JH6j_18CW8&libraries=places"></script>
-  
-  </body>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+  </script> 
+  <script src="index.js">
+  </script> 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQH8HSvpjQlxsEvFdsskrM2JH6j_18CW8&libraries=places" type="text/javascript">
+  </script>
+</body>
 </html>
