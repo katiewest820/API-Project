@@ -36,6 +36,7 @@ html, body, section{
 
 .beginButton:hover{
 	background-color: grey;
+	cursor: pointer;
 }
 
 .lightbox{
@@ -71,6 +72,7 @@ html, body, section{
 .searchButton:hover{
 	background-color: white;
 	color:black;
+	cursor: pointer;
 }
 
 .location{
@@ -257,6 +259,7 @@ html, body, section{
 
 .nextOption:hover, .newSearch:hover{
 	background-color: #3e8e41;
+	cursor: pointer;
 }
 
 
