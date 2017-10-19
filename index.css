@@ -207,7 +207,7 @@ html, body, section{
 
 .infoSection{
 	margin-top:5px;
-	width:75%;
+	width:70%;
 	margin:auto;
 }
 
@@ -322,7 +322,7 @@ html, body, section{
 }
 
 .reviewCell{
-	min-width: 500px;
+	min-width: 630px;
 }
 
 

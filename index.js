@@ -116,8 +116,12 @@ function displayWebsite() {
 }
 
 function displayPhone() {
+	if(phone == undefined){
+		$('.results').append(` `)
+	}else{
 	$('.results').append(`<p class="phone">${phone}</p>`);
-}
+	}
+}	
 
 function displayHours() {
 	$('.hours').empty();
