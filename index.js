@@ -37,15 +37,18 @@ function nothingFound() {
 				$('.lightbox').fadeIn(200).css('display', 'block');
 			}, 3000)
 		} else {
-			$('.firstPage').fadeOut(200);
-			$('.lightbox').fadeOut(200);
-			$('.loadScreen').css('display', 'block').delay(3000).fadeOut(200);
+			//$('.firstPage').fadeOut(200);
+			//$('.lightbox').fadeOut(200);
+			//$('.loadScreen').css('display', 'block').delay(3000).fadeOut(200);
 			initialize(value);
 		}
 	});
 }
 
+
+
 function initialize(searchterm) {
+	
 	service = new google.maps.places.PlacesService($('.location, .food').get(0));
 	service.textSearch({
 		query: searchterm,
@@ -53,13 +56,15 @@ function initialize(searchterm) {
 	}, function(place) {
 		checkBeginningReset(place)
 		if (place[0] == undefined) {
-			$('.firstPage').css('display', 'block');
+			$('.lightbox').fadeOut(200);//.css('display', 'none');
 			$('.makeASelectionScreen').fadeIn(200).css('display', 'block').delay(3000).fadeOut(100);
 			setTimeout(function() {
-				$('.firstPage').fadeIn(200).css('display', 'block');
+				//$('.firstPage').css('display', 'block');
 				$('.lightbox').fadeIn(200).css('display', 'block');
 			}, 3000)
 		} else {
+			$('.firstPage').fadeOut(200);
+			$('.lightbox').fadeOut(200);
 			getDetails(place[result])
 			search();
 		}
@@ -93,7 +98,10 @@ function checkBeginningReset(place) {
 
 function displayImages() {
 	clearResults();
-	$('.resultsImg').append(`<img alt="google image of location" class="locationImg" src="${photos[imgResult].getUrl({maxWidth: 400, maxHeight: 400})}">`);
+	if(photos == undefined){
+		$('.resultsImg').append(`No Images Available`);
+	}else{$('.resultsImg').append(`<img alt="google image of location" class="locationImg" src="${photos[imgResult].getUrl({maxWidth: 400, maxHeight: 400})}">`);
+	}
 }
 
 function displayResults(place) {
@@ -119,8 +127,11 @@ function displayHours() {
 }
 
 function reviews() {
-	$('.reviewSection').html(`<h2 class="rating">${review[reviewNum].rating} out of 5</h2>
-							<p class="review">${review[reviewNum].text}</p>`);
+	if(review == undefined){
+		$('.reviewSection').html(`No Reviews Available`);
+	}else{ 
+		$('.reviewSection').html(`<h2 class="rating">${review[reviewNum].rating} out of 5</h2><p class="review">${review[reviewNum].text}</p>`);
+	}	
 }
 
 function nextReview() {
