@@ -237,7 +237,7 @@ html, body, section{
 }
 
 .hours{
-	min-width: 200px;
+	min-width: 190px;
 	border:solid grey 2px;
 	margin:auto;
 }
