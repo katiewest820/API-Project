@@ -11,19 +11,20 @@ let website;
 let review;
 let reviewNum = 0;
 
+//clickhandler to begin search.
 function lightboxOpen() {
 	$('.beginButton').on('click', function() {
 		$('.beginButton').css('visibility', 'hidden');
 		$('.lightbox').fadeIn(200).css('display', 'block');
 	});
 }
-
+//loads results page
 function search() {
 	$('.firstPage').fadeOut(300);
 	$('.lightbox').fadeOut(300);
 	$('.resultsPage').css('display', 'grid');
 }
-
+//check to see if user enters required data into input fields. If not, error screen loads.
 function nothingFound() {
 	$('.searchButton').on('click', function(event) {
 		event.preventDefault();
@@ -41,9 +42,7 @@ function nothingFound() {
 		}
 	});
 }
-
-
-
+//calls google places api passing in user input. If no results found, error message loads. 
 function initialize(searchterm) {
 	service = new google.maps.places.PlacesService($('.location, .food').get(0));
 	service.textSearch({
@@ -65,7 +64,7 @@ function initialize(searchterm) {
 		}
 	});
 }
-
+//pushes api data into global variables and runs results functions. 
 function getDetails(place) {
 	service.getDetails({
 		placeId: place.place_id
@@ -84,13 +83,13 @@ function getDetails(place) {
 	});
 	displayResults(place)
 }
-
+//loops results array.
 function checkBeginningReset(place) {
 	if (place[result] == undefined) {
 		result = 0
 	}
 }
-
+//displays images on results page.
 function displayImages() {
 	clearResults();
 	if(photos == undefined){
@@ -98,18 +97,18 @@ function displayImages() {
 	}else{$('.resultsImg').append(`<img alt="google image of location" class="locationImg" src="${photos[imgResult].getUrl({maxWidth: 400, maxHeight: 400})}">`);
 	}
 }
-
+//displays location name and address on results page.
 function displayResults(place) {
 	$('.results').html(`<h1 class="name">${place.name}</h1>
 	<address><a href="https://www.google.com/maps?q=${place.formatted_address}" 
 	target="_blank" class="address">${place.formatted_address}</a></address>`);
 	result++;
 }
-
+//displays wesbite on results page. 
 function displayWebsite() {
 	$('.results').append(`<a target="_blank" href="${website}"class="website">${website}</a>`)
 }
-
+//displays phone number on results page. 
 function displayPhone() {
 	if(phone == undefined){
 		$('.results').append(` `)
@@ -117,14 +116,14 @@ function displayPhone() {
 	$('.results').append(`<p class="phone">${phone}</p>`);
 	}
 }	
-
+//displays hours on results page. 
 function displayHours() {
 	$('.hours').empty();
 	for (let i = 0; i < hours.weekday_text.length; i++) {
 		$('.hours').append(`<ul><li> ${hours.weekday_text[i]}</li></ul>`);
 	}
 }
-
+//displays reviews on results page. 
 function reviews() {
 	if(review == undefined){
 		$('.reviewSection').html(`No Reviews Available`);
@@ -132,7 +131,7 @@ function reviews() {
 		$('.reviewSection').html(`<h2 class="rating">${review[reviewNum].rating} out of 5</h2><p class="review">${review[reviewNum].text}</p>`);
 	}	
 }
-
+//loops through reviews. 
 function nextReview() {
 	$('.rightRev').on('click', function(event) {
 		event.preventDefault();
@@ -154,7 +153,7 @@ function prevReview() {
 		reviews();
 	});
 }
-
+//loads next location result. 
 function nextOption() {
 	$('.nextOption').on('click', function(event) {
 		event.preventDefault();
@@ -164,7 +163,7 @@ function nextOption() {
 		reviewNum = 0;
 	});
 }
-
+//loops through images. 
 function nextImg() {
 	$('.rightImg').on('click', function() {
 		imgResult = imgResult + 1;
@@ -184,11 +183,11 @@ function prevImg() {
 		displayImages();
 	});
 }
-
+//clears out image so next image can load when necessary.
 function clearResults() {
 	$('.resultsImg').empty();
 }
-
+//returns user to search input screen. 
 function newSearch() {
 	$('.newSearch').on('click', function() {
 		$('.location').val('');
@@ -197,7 +196,7 @@ function newSearch() {
 		$('.lightbox').fadeIn(300).css('display', 'block');
 	});
 }
-
+//loads clickhandlers when browser is ready. 
 $(function() {
 	nextOption()
 	nextImg()

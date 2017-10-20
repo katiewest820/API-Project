@@ -1,3 +1,4 @@
+/*apply to all*/
 *{
 	margin:0;
 	padding:0;
@@ -8,7 +9,7 @@ html, body, section{
 	height:100%;
 	width:100%;
 }
-
+/*first page styles*/
 .frontImage{
 	background-image: url("beer.jpg");
 	background-repeat: no-repeat;
@@ -38,7 +39,7 @@ html, body, section{
 	background-color: grey;
 	cursor: pointer;
 }
-
+/*lightbox and search styles*/
 .lightbox{
     display: none;
     position: fixed;
@@ -92,48 +93,6 @@ html, body, section{
     
 }
 
-.loadScreen{
-	display: none;
-	height:1000px;
-	width:100%;
-	background-color: grey;
-}
-.loading{
-	font-size: 80px;
-	font-weight: bold;
-	position:relative;
-  	text-align:center;
-	top:200px;
-	font-family: 'Amatic SC', cursive;
-}
-
-@keyframes blink {
-    0% {
-      opacity: .2;
-    }
-    20% {
-      opacity: 1;
-    }
-    100% {
-      opacity: .2;
-    }
-}
-
-.loading span{
-    animation-name: blink;
-    animation-duration: 1.4s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-}
-
-.loading span:nth-child(2) {
-    animation-delay: .2s;
-}
-
-.loading span:nth-child(3) {
-    animation-delay: .4s;
-}
-
 .makeASelectionScreen{
 	display: none;
 	width:200px;
@@ -149,7 +108,7 @@ html, body, section{
 	border: solid white 3px;
 	border-radius: 5px;
 }
-
+/*results page styling*/
 .imgSection{
 	display:none;
 	background-image: url("background.jpeg");
@@ -265,7 +224,7 @@ html, body, section{
 
 
 @media (min-width: 640px){
-
+/*first page mediaQ styles*/
 .beginButton{
 	left:55%;
 	padding: 30px 80px;
@@ -274,14 +233,6 @@ html, body, section{
 .makeASelectionScreen{
 	bottom: 500px;
 	font-size: 30px;
-}
-
-.imgSection{
-	display:grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	justify-items:center;
-	align-items:center;
-	min-height: 400px;
 }
 
 .lightbox div{
@@ -294,13 +245,21 @@ html, body, section{
 	height:300px;
 	max-width: fit-content;
 }
-
+/*results page mediaQ styles*/
 .leftImg{
 	padding-left: 70%
 }
 
 .rightImg{
 	padding-right: 70%;
+}
+
+.imgSection{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items:center;
+	align-items:center;
+	min-height: 400px;
 }
 
 .results{
@@ -326,6 +285,5 @@ html, body, section{
 	min-width: 600px;
 	font-size: 18px;
 }
-
 
 }

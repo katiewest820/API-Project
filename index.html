@@ -23,7 +23,11 @@
   <section class="lightbox">
     <div>
       <form>
-        <input class="location" placeholder="Location" required="" type="text"> <select class="dropdown" required="">
+        <label for="location">
+        <input class="location" placeholder="Location" required="" type="text"> 
+        </label>
+        <label for="dropdown">
+        <select class="dropdown" required="">
           <option disabled selected>Beer Style</option>
           <option>English Ale</option>
           <option>German Ale</option>
@@ -35,25 +39,25 @@
           <option>Saison</option>
           <option>Sour</option>
           <option>Stout</option>
+          </label>
         </select> <button class="searchButton">Submit</button>
       </form>
     </div>
   </section>
-  <section class="loadScreen">
-    <p class="loading">Loading<span>.</span><span>.</span><span>.</span></p>
-  </section>
   <section class="resultsPage">
     <div class="imgSection">
-      <a class="leftImg" href="#"><i aria-hidden="true" class="fa fa-arrow-left fa-3x"></i></a>
-      <div class="resultsImg"></div><a class="rightImg" href="#"><i aria-hidden="true" class="fa fa-arrow-right fa-3x"></i></a>
+      <a class="leftImg" href="#"><i role="tab" aria-hidden="true" class="fa fa-arrow-left fa-3x"></i></a>
+      <div class="resultsImg"></div>
+      <a class="rightImg" href="#"><i role="tab" aria-hidden="true" class="fa fa-arrow-right fa-3x"></i></a>
     </div>
     <div class="resultsSection">
       <div class="results"></div>
       <div class="infoSection">
         <div class="hours"></div>
         <div class="reviewCell">
-          <a class="leftRev" href="#"><i aria-hidden="true" class="fa fa-arrow-left"></i></a>
-          <div class="reviewSection"></div><a class="rightRev" href="#"><i aria-hidden="true" class="fa fa-arrow-right"></i></a>
+          <a class="leftRev" href="#"><i role="tab" aria-hidden="true" class="fa fa-arrow-left"></i></a>
+          <div class="reviewSection"></div>
+          <a class="rightRev" href="#"><i role="tab" aria-hidden="true" class="fa fa-arrow-right"></i></a>
         </div>
       </div>
       <div class="nextOptionClass">
