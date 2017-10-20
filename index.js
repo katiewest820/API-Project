@@ -37,9 +37,6 @@ function nothingFound() {
 				$('.lightbox').fadeIn(200).css('display', 'block');
 			}, 3000)
 		} else {
-			//$('.firstPage').fadeOut(200);
-			//$('.lightbox').fadeOut(200);
-			//$('.loadScreen').css('display', 'block').delay(3000).fadeOut(200);
 			initialize(value);
 		}
 	});
@@ -48,7 +45,6 @@ function nothingFound() {
 
 
 function initialize(searchterm) {
-	
 	service = new google.maps.places.PlacesService($('.location, .food').get(0));
 	service.textSearch({
 		query: searchterm,
@@ -56,16 +52,15 @@ function initialize(searchterm) {
 	}, function(place) {
 		checkBeginningReset(place)
 		if (place[0] == undefined) {
-			$('.lightbox').fadeOut(200);//.css('display', 'none');
+			$('.lightbox').fadeOut(200);
 			$('.makeASelectionScreen').fadeIn(200).css('display', 'block').delay(3000).fadeOut(100);
 			setTimeout(function() {
-				//$('.firstPage').css('display', 'block');
 				$('.lightbox').fadeIn(200).css('display', 'block');
 			}, 3000)
 		} else {
 			$('.firstPage').fadeOut(200);
 			$('.lightbox').fadeOut(200);
-			getDetails(place[result])
+			getDetails(place[result]);
 			search();
 		}
 	});
@@ -164,7 +159,6 @@ function nextOption() {
 	$('.nextOption').on('click', function(event) {
 		event.preventDefault();
 		initialize(value);
-		//
 		$('.loadScreen').css('display','none');
 		imgResult = 0;
 		reviewNum = 0;
@@ -203,6 +197,7 @@ function newSearch() {
 		$('.lightbox').fadeIn(300).css('display', 'block');
 	});
 }
+
 $(function() {
 	nextOption()
 	nextImg()

@@ -207,7 +207,7 @@ html, body, section{
 
 .infoSection{
 	margin-top:5px;
-	width:70%;
+	width:73%;
 	margin:auto;
 }
 
@@ -231,12 +231,13 @@ html, body, section{
 
 .hours, .hours li{
 	padding:5px;
-	font-size: 16px;
+	font-size: 15px;
 	align-self: center;
 	list-style: none;
 }
 
 .hours{
+	min-width: 200px;
 	border:solid grey 2px;
 	margin:auto;
 }
@@ -322,8 +323,8 @@ html, body, section{
 }
 
 .reviewCell{
-	min-width: 630px;
-	font-size: 20px;
+	min-width: 600px;
+	font-size: 18px;
 }
 
 
