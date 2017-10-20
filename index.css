@@ -231,7 +231,7 @@ html, body, section{
 
 .hours, .hours li{
 	padding:5px;
-	font-size: 13px;
+	font-size: 16px;
 	align-self: center;
 	list-style: none;
 }
@@ -318,11 +318,12 @@ html, body, section{
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr;
-	padding-bottom: 80px;
+	padding-bottom: 60px;
 }
 
 .reviewCell{
 	min-width: 630px;
+	font-size: 20px;
 }
 
 
