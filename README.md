@@ -1,8 +1,8 @@
 # Beers? Brewery Search
 
-Check out **Beers?** app [HERE](https://katiewest820.github.io/API-Project/#)
+Check out **Beers?** app [HERE](https://katiewest820.github.io/beers_brewery_search/#)
 
-[Screenshots](https://github.com/katiewest820/API-Project/tree/master/Screenshots)
+[Screenshots](https://github.com/katiewest820/beers_brewery_search/tree/master/Screenshots)
 
 ##Summary:
 
