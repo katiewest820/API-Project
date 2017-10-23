@@ -120,7 +120,7 @@ function displayPhone() {
 function displayHours() {
 	$('.hours').empty();
 	for (let i = 0; i < hours.weekday_text.length; i++) {
-		$('.hours').append(`<ul><li> ${hours.weekday_text[i]}</li></ul>`);
+		$('.hours').append(`<ul><li> ${hours.weekday_text[i]}</li></ul>`).addClass('animated fadeInLeft').css('animation-duration', '3s');
 	}
 }
 //displays reviews on results page. 
@@ -128,7 +128,8 @@ function reviews() {
 	if(review == undefined){
 		$('.reviewSection').html(`No Reviews Available`);
 	}else{ 
-		$('.reviewSection').html(`<h2 class="rating">${review[reviewNum].rating} out of 5</h2><p class="review">${review[reviewNum].text}</p>`);
+		$('.reviewSection').html(`<h2 class="rating"><span>Review:</span> ${review[reviewNum].rating} 
+			out of 5</h2><p class="review">${review[reviewNum].text}</p>`).addClass('animated fadeInRight').css('animation-duration', '3s');
 	}	
 }
 //loops through reviews. 
