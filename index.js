@@ -131,6 +131,8 @@ function reviews() {
 		$('.reviewSection').html(`<h2 class="rating"><span>Review:</span> ${review[reviewNum].rating} 
 			out of 5</h2><p class="review">${review[reviewNum].text}</p>`).addClass('animated fadeInRight').css('animation-duration', '3s');
 	}	
+	$('.leftRev').fadeIn(6000);
+	$('.rightRev').fadeIn(6000);
 }
 //loops through reviews. 
 function nextReview() {

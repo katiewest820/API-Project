@@ -24,7 +24,7 @@ html, body, section{
 	position:absolute;
 	left:40%;
 	top:60%;
-	background-color: #ffe301;
+	background-color: #ecb400;
 	font-family: 'Amatic SC', cursive;
 	color:black;
 	font-weight: bold;
@@ -72,7 +72,7 @@ html, body, section{
 }
 
 .searchButton:hover{
-	background-color: #ffe301;
+	background-color: #ecb400;
 	color:black;
 	cursor: pointer;
 }
@@ -188,7 +188,11 @@ html, body, section{
 }
 
  h2.rating span{
-	color:#ffe301;
+	color:#ecb400;
+}
+
+.leftRev, .rightRev{
+	display:none;
 }
 
 .fa{
@@ -196,7 +200,7 @@ html, body, section{
 }
 
 .fa:hover{
-	color: #ffe301;
+	color: #ecb400;
 }
 
 .hours, .hours li{
@@ -225,12 +229,13 @@ html, body, section{
 	color:white;
 	font-family: 'Amatic SC', cursive;
 	font-size: 20px;
+	font-weight: bold;
 	padding: 10px 30px;
 	margin-bottom:20px;
 }
 
 .nextOption:hover, .newSearch:hover{
-	background-color: #ffe301;
+	background-color: #ecb400;
 	color:black;
 	cursor: pointer;
 }
@@ -291,7 +296,7 @@ html, body, section{
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr;
-	padding-bottom: 60px;
+	padding-bottom: 30px;
 	justify-items:center;
 }
 
