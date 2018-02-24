@@ -2,46 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b663efaa-b73b-40c0-8e9a-198c519de41f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/API project.ai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/button.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dessert.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/HELP-US-OUT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/animated.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/core.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/icons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/larger.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/path.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/screen-reader.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_animated.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_screen-reader.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/font-awesome-4.7.0/scss/font-awesome.scss" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.css" afterPath="$PROJECT_DIR$/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -70,8 +30,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="122" column="32" lean-forward="false" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
+            <state relative-caret-position="278">
+              <caret line="276" column="17" lean-forward="false" selection-start-line="276" selection-start-column="17" selection-end-line="276" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -111,6 +71,7 @@
       <find>reviewsection</find>
       <find>fa</find>
       <find>infosection</find>
+      <find>imgsection</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -260,12 +221,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519504963207</updated>
-      <workItem from="1519504964460" duration="3207000" />
+      <workItem from="1519504964460" duration="3810000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3207000" />
+    <option name="totallyTimeSpent" value="3810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="0" />
@@ -332,8 +293,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="122" column="32" lean-forward="false" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
+        <state relative-caret-position="278">
+          <caret line="276" column="17" lean-forward="false" selection-start-line="276" selection-start-column="17" selection-end-line="276" selection-end-column="17" />
           <folding />
         </state>
       </provider>
