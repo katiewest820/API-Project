@@ -49,7 +49,7 @@ function initialize(searchterm) {
 		query: searchterm,
 		type: 'bar'
 	}, function(place) {
-		checkBeginningReset(place)
+		checkBeginningReset(place);
 		if (place[0] == undefined) {
 			$('.lightbox').fadeOut(200);
 			$('.makeASelectionScreen').fadeIn(200).css('display', 'block').delay(3000).fadeOut(100);
@@ -69,24 +69,23 @@ function getDetails(place) {
 	service.getDetails({
 		placeId: place.place_id
 	}, function callback(placeId) {
-		photos = placeId.photos
-		hours = placeId.opening_hours
-		phone = placeId.formatted_phone_number
-		review = placeId.reviews
-		website = placeId.website
-		console.log(placeId.website)
-		displayImages()
-		displayHours()
-		displayWebsite()
-		displayPhone()
-		reviews()
+		photos = placeId.photos;
+		hours = placeId.opening_hours;
+		phone = placeId.formatted_phone_number;
+		review = placeId.reviews;
+		website = placeId.website;
+		displayImages();
+		displayHours();
+		displayWebsite();
+		displayPhone();
+		reviews();
 	});
 	displayResults(place)
 }
 //loops results array.
 function checkBeginningReset(place) {
 	if (place[result] == undefined) {
-		result = 0
+		result = 0;
 	}
 }
 //displays images on results page.
@@ -106,12 +105,12 @@ function displayResults(place) {
 }
 //displays wesbite on results page. 
 function displayWebsite() {
-	$('.results').append(`<a target="_blank" href="${website}"class="website">${website}</a>`)
+	$('.results').append(`<a target="_blank" href="${website}"class="website">${website}</a>`);
 }
 //displays phone number on results page. 
 function displayPhone() {
 	if(phone == undefined){
-		$('.results').append(` `)
+		$('.results').append(` `);
 	}else{
 	$('.results').append(`<p class="phone">${phone}</p>`);
 	}
@@ -201,12 +200,12 @@ function newSearch() {
 }
 //loads clickhandlers when browser is ready. 
 $(function() {
-	nextOption()
-	nextImg()
-	prevImg()
-	lightboxOpen()
-	nothingFound()
-	nextReview()
-	prevReview()
-	newSearch()
+	nextOption();
+	nextImg();
+	prevImg();
+	lightboxOpen();
+	nothingFound();
+	nextReview();
+	prevReview();
+	newSearch();
 });

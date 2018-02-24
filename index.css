@@ -54,6 +54,7 @@ html, body, section{
 }
 
 .lightbox div{
+	margin: 5%;
 	margin-top:50%;
 	padding:30px;
 	background-color:grey;
@@ -118,6 +119,7 @@ html, body, section{
 	border-bottom: black 10px solid;
 	width:100%;
 	display:grid;
+	grid-gap: 10px;
 	grid-template-columns: 1fr 1fr 1fr;
 	justify-items: center;
 	align-items: center;
@@ -167,7 +169,6 @@ html, body, section{
 
 .infoSection{
 	margin-top:5px;
-	width:80%;
 	margin:auto;
 	font-family: arial;
 }
@@ -175,7 +176,7 @@ html, body, section{
 .reviewCell{
 	display: inline-flex;
 	align-items: center;
-	margin:auto;
+	margin: 0 5%;
 }
 
 .reviewSection{
@@ -241,7 +242,7 @@ html, body, section{
 }
 
 
-@media (min-width: 640px){
+@media (min-width: 750px){
 /*first page mediaQ styles*/
 .beginButton{
 	left:55%;
@@ -265,11 +266,11 @@ html, body, section{
 }
 /*results page mediaQ styles*/
 .leftImg{
-	padding-left: 70%
+	justify-self: end;
 }
 
 .rightImg{
-	padding-right: 70%;
+	justify-self: start;
 }
 
 .imgSection{
@@ -295,15 +296,26 @@ html, body, section{
 .infoSection{
 	display: grid;
 	grid-template-rows: 1fr;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 10px;
+	width: 70%;
 	padding-bottom: 30px;
 	justify-items:center;
 }
 
 .reviewCell{
-	min-width: 600px;
+
 	font-size: 20px;
-	margin-left:10px;
+}
+
+.reviewSection{
+	min-height: 400px;
+	max-height: fit-content;
+	display: grid;
+}
+
+.rating{
+	align-self: end;
 }
 
 }
